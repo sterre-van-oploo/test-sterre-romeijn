@@ -1,0 +1,167 @@
+<!-- This is bug 1 -->
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <title>Webshop</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body onload="onLoad()">
+
+<!-- this blurs the page out when clicking a product -->
+<div id="blur" class="blureffect" onclick="disablepopUp()"></div>
+
+<div id="normalcontainer"></div>
+
+<!--MainContainer including everything in the homepage -->
+<div id="HomePageContainer">
+    <!--Header containing shopping cart, products in cart, Title and total price in kart -->
+    <div id="Header">
+        <div class="text"><h1>Welcome to Very Useful Products!</h1></div>
+        <div class = "login">
+            <input id="login">
+            <a class="text tooltip" onclick="logIn()" id="loginbut">Login<span class="tooltiptext">click to login</span></a>
+        </div>
+        <div id="Headersidebar">
+            <div class="icon-bedge text" id="cartstock"></div>
+            <div class="icon-badge-container">
+                <img src="img/cart.png" class="CartImage" onclick="showhidecart()">
+            </div>
+            <div class="text" id="totalprice">Money</div>
+        </div>
+    </div>
+    <!--Bottom container including the products of a page also category of products -->
+    <div id="bottomcontainer">
+        <div class="Categorydescr">Product Category: Very useful</div>
+        <div id="productContainer">
+            <!--Product 1 -->
+            <div class="product tooltip" onclick="popUp(0)">
+                <span class="tooltiptext">opens buy page</span>
+                <div class="productnameText">Blinker Fluid</div>
+                <img src="./img/blinker-fluid.jpeg" class="image">
+                <div class="text" id="productprice0"></div>
+            </div>
+            <!--Product 2 -->
+            <div class="product tooltip" onclick="popUp(1)">
+                <span class="tooltiptext">opens buy page</span>
+                <div class="productnameText">Invisible T-Shirt</div>
+                <img src="img/invisible_t-shirt.jpg" class="image">
+                <div class="text" id="productprice1"></div>
+            </div>
+            <!--Product 3 -->
+            <div class="product tooltip" onclick="popUp(2)">
+                <span class="tooltiptext">opens buy page</span>
+                <div class="productnameText">Square Tire</div>
+                <img src="img/square%20tire.jpg" class="image">
+                <div class="text" id="productprice2"></div>
+            </div>
+
+        </div>
+    </div>
+    <!--This will show when you click on the shopping cart button-->
+    <div id="shoppingcart">
+        <div id="splitscreencontainer">
+            <div id="bigsplitcontainer">
+                <div id="insidebigsplit">
+                    <div id="shoppingtitle">
+                        <div class="categoryText">Shopping Cart</div>
+                        <div class="categoryText" id="summary">Total Items: 0</div>
+                    </div>
+                    <div id="Items">
+                        <div class="item" id = "item0">
+                            <img src="./img/blinker-fluid.jpeg" class="imagecheckout">
+                            <div class="textcheckout">Blinker Fluid</div>
+                            <div class="textcheckout" id="checkoutprice0"> </div>
+                            <div class="textcheckout" id="checkoutammount0"> amount</div>
+                            <div class="textcheckout" id="checkouttotal0"> total</div>
+                        </div>
+                        <div class="item" id = "item1">
+                            <img src="img/invisible_t-shirt.jpg" class="imagecheckout">
+                            <div class="textcheckout">Invisible T-shirt</div>
+                            <div class="textcheckout" id="checkoutprice1"> </div>
+                            <div class="textcheckout" id="checkoutammount1"> amount</div>
+                            <div class="textcheckout" id="checkouttotal1"> total</div>
+                        </div>
+                        <div class="item" id = "item2">
+                            <img src="img/square%20tire.jpg" class="imagecheckout">
+                            <div class="textcheckout">Square Tire</div>
+                            <div class="textcheckout" id="checkoutprice2"> </div>
+                            <div class="textcheckout" id="checkoutammount2"> amount</div>
+                            <div class="textcheckout" id="checkouttotal2"> total</div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div id="smallsplitcontainer">
+                <div id="Ordersummary">Order Summary</div>
+                <div id="CheckoutContainer">
+                    <div id="totalpricecheckout" class="textcheckout">Total Cost: 50,-</div>
+                    <button id="CheckoutButton" class="tooltip" onclick="checkOut()">Checkout<span class="tooltiptext">click to checkout</span></button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div id="popupContainer">
+    <div class="PopupWindow fadein" id="poPup1">
+        <img src="./img/blinker-fluid.jpeg"class="descriptionimg">  
+        <div class="descriptionspecific">
+            <div class="descriptiontitle">Blinker Fluid</div>
+            <div class ="biggerdescriptiontext">Introducing the world-famous Blinker Fluid, the automotive industry's<br>
+                best-kept secret! Are your turn signals feeling sluggish and dim? Shed <br>
+                some light on the situation with our revolutionary Blinker Fluid
+            </div>
+            <div class="text" id="product1">stock = 0</div>
+            <div class="descriptioncart">
+                <img src="img/cart.png" class="smallcartimg"></img>
+                <div class="ammount" id="cart0">0</div>
+                <img src="img/trash-regular-24.png" onclick="removecartproduct(0)" id="minbutton0" class="tooltip">
+            </div>
+            <button class="purchase tooltip" onclick=addcartproduct(0) id="button0"><span class="tooltiptext">Adds to cart</span>PURCAHSE</button>
+        </div>
+    </div>
+    <div class="PopupWindow fadein" id="poPup2">
+        <img src="img/invisible_t-shirt.jpg" class="descriptionimg">
+        <div class="descriptionspecific">
+            <div class="descriptiontitle">Invisible T-shirt</div>
+            <div class ="biggerdescriptiontext">Introducing the Invisible T-Shirt, where less truly means more! If you've <br>
+                ever thought, "I want to wear a T-shirt, but I also want to feel like I'm <br>
+                wearing absolutely nothing," then this fashion-forward masterpiece is for you!
+            </div>
+            <div class="text" id="product2">stock = 0</div>
+            <div class="descriptioncart">
+                <img src="img/cart.png" class="smallcartimg"></img>
+                <div class="ammount" id="cart1">0</div>
+               <img src="img/trash-regular-24.png" onclick="removecartproduct(1)" id="minbutton1">
+            </div>
+            <button class="purchase" onclick=addcartproduct(1) id="button1">PURCAHSE</button>
+        </div>
+    </div>
+    <div class="PopupWindow fadein" id="poPup3">
+        <img src="img/square%20tire.jpg" class="descriptionimg">
+        <div class="descriptionspecific">
+            <div class="descriptiontitle">Square Tire</div>
+            <div class ="biggerdescriptiontext">Revolutionize your ride with our cutting-edge Square Tires!<br>
+                When it comes to thinking outside the box (or tire in this case),<br>
+                we've got it squared away!
+            </div>
+            <div class="text" id="product3">stock = 0</div>
+            <div class="descriptioncart">
+                <img src="img/cart.png" class="smallcartimg"></img>
+                <div class="ammount" id="cart2">0</div>
+                <img src="img/trash-regular-24.png" onclick="removecartproduct(2)" id="minbutton2">
+            </div>
+            <button class="purchase" onclick=addcartproduct(2) id="button2">PURCAHSE</button>
+        </div>
+    </div>
+</div>
+
+
+
+<script src="js/homepagelogics.js"></script>
+</body>
+</html>

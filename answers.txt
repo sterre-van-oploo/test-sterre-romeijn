@@ -1,0 +1,96 @@
+Bug report:
+
+Priority levels: Low, Medium, High, Blocker
+
+Bug 1:
+What was wrong: "This is bug 1" was written on top of the screen
+Priority: Low
+Error message (if any): no error message
+What solved the issue?: removing the text from the code
+
+
+Bug 2:
+What was wrong: "very useful" was written as "vary useful"
+Priority: Low
+Error message (if any): mo error message
+What solved the issue?: change the word
+
+
+Bug 3:
+What was wrong: the blinker fluid img didn't show up when you clicked on the img
+Priority: high
+Error message (if any): GET file:///C:/school/SD/DV-debugging-testB/img/blinker-fluid.jpg net::ERR_FILE_NOT_FOUND
+What solved the issue?: typing a "./" before img // like this ./img/blinker-fluid.jpeg
+
+
+Bug 4:
+What was wrong: function.checkout was completly commented out
+Priority: high
+Error message (if any): Uncaught ReferenceError: checkOut is not defined at HTMLButtonElement.onclick (index.html:100:86) onclick @ index.html:100
+What solved the issue?: uncommend (uncomment?) the code
+
+
+Bug 5:
+What was wrong: can't remove items out of the cart
+Priority: blocker
+Error message (if any): Uncaught ReferenceError ReferenceError: product is not defined at removecartproduct (c:\school\SD\DV-debugging-testB\js\homepagelogics.js:42:15) at onclick (c:\school\SD\DV-debugging-testB\index.html:122:116)
+What solved the issue?: no fix found
+
+
+Bug 6:
+What was wrong: if you buy 1 t-shirt it says "NaN"
+Priority: high
+Error message (if any): none
+What solved the issue?:  in the js file the stock was written as "let stock = [10, "seven", 3];" I changed it to "let stock = [10, 7, 3];"
+
+
+Bug 7:
+What was wrong: the stock of the t-shirt says 7 but after putting 7 in your cart, it doesn't stop
+Priority: high
+Error message (if any): none
+What solved the issue?:  in the js file the stock was written as "let stock = [10, "seven", 3];" I changed it to "let stock = [10, 7, 3];"
+
+
+Bug 8:
+What was wrong: when you log in, your name says "undefined"
+Priority: high
+Error message (if any): none
+What solved the issue?: no fix found 
+note: If I change the "let button = document.getElementById("loginbut");" to let button = document.getElementById("login"); , it actually displays the name in the console, but I don't know how to make it change in the website itself.
+
+
+Bug 9:
+What was wrong: the counter for the stuff in the shopping card is below the shopping card 
+Priority: low
+Error message (if any): none
+What solved the issue?: "icon-bedge" was in the wrong div, so I moved it up and outside the div of "icon-badge-container" now it's besides the shoppingcard
+
+
+Bug 10:
+What was wrong: when your in the shopping card menu and click on the shopping card, you get an error message
+Priority: Medium
+Error message (if any): Uncaught ReferenceError ReferenceError: True is not defined at showhidecart (c:\school\SD\DV-debugging-testB\js\homepagelogics.js:110:9) at onclick (c:\school\SD\DV-debugging-testB\index.html:27:84)
+What solved the issue?: the "true" statement was written as "True" so I changed the T to a t.
+
+
+Bug 11:
+What was wrong: in the bigger t-shirt menu, the stock is "seven" instead of 7
+Priority: low
+Error message (if any): none
+What solved the issue?: in the js file the stock was written as "let stock = [10, "seven", 3];" I changed it to "let stock = [10, 7, 3];"
+
+
+Bug 12:
+What was wrong: the counter for the stuff in the shopping card had the wrong styling 
+Priority: low
+Error message (if any): none
+What solved the issue?: I gave it the "text" class
+
+
+Bug 13:
+What was wrong: got an error when you clicked the login button
+Priority: low 
+Error message (if any): Uncaught TypeError TypeError: inputfield.clear is not a function at logIn (c:\school\SD\DV-debugging-testB\js\homepagelogics.js:165:16) at onclick (c:\school\SD\DV-debugging-testB\index.html:23:69)
+What solved the issue?: removed the () that where after "clear" 
+
+Copy/Paste the template if you find more bugs.
